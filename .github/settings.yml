@@ -1,0 +1,17 @@
+_extends: .github
+
+repository:
+  name: bluefeed
+  description: "A Bluesky Feed generator based on a server's members"
+  private: false
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks:
+          - context: Test Build
+          - context: ESLint
+          - context: Jest
+          - context: CodeQL
+          - context: DeepScan
